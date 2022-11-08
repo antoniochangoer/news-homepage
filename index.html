@@ -14,7 +14,7 @@
     <title>News homepage</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container overflow-h">
       <header>
         <nav class="nav">
           <img class="nav__logo" src="./images/logo.svg" alt="" />
@@ -30,6 +30,22 @@
             alt="three striped menu"
             class="nav__hamburger"
           />
+          <div class="backdrop"></div>
+          <!-- side menu -->
+          <div class="side-menu">
+            <img
+              class="nav__logo nav__logo--close"
+              src="./images/icon-menu-close.svg"
+              alt=""
+            />
+            <ul class="side-menu__items">
+              <li class="side-menu__item">Home</li>
+              <li class="side-menu__item">New</li>
+              <li class="side-menu__item">Popular</li>
+              <li class="side-menu__item">Trending</li>
+              <li class="side-menu__item">Categories</li>
+            </ul>
+          </div>
         </nav>
       </header>
       <main>
@@ -70,7 +86,7 @@
             </p>
           </article>
         </aside>
-        <article class="homgepage__top-article">
+        <article class="homepage__top-article">
           <img
             src="./images/image-retro-pcs.jpg"
             alt=""
@@ -84,7 +100,7 @@
             </p>
           </div>
         </article>
-        <article class="homgepage__top-article">
+        <article class="homepage__top-article">
           <img
             src="./images/image-top-laptops.jpg"
             alt=""
@@ -98,7 +114,7 @@
             </p>
           </div>
         </article>
-        <article class="homgepage__top-article">
+        <article class="homepage__top-article">
           <img
             src="./images/image-gaming-growth.jpg"
             alt=""

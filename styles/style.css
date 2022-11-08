@@ -73,9 +73,15 @@ h6 {
   overflow-wrap: break-word;
 }
 
+.overflow-h {
+  overflow-x: hidden;
+  position: relative;
+}
+
 .container {
   max-width: min(111rem, 90%);
   margin-inline: auto;
+  padding: 2.8rem 0;
 }
 
 /* temporary */
@@ -84,7 +90,6 @@ h6 {
 }
 
 .nav {
-  padding-top: 2.8rem;
   padding-bottom: 3.2rem;
   display: flex;
   align-items: center;
@@ -94,6 +99,71 @@ h6 {
 .nav__logo {
   max-width: 4.4rem;
   max-height: 2.8rem;
+}
+
+.nav__logo--close {
+}
+
+/* side menu related content */
+.nav__hamburger {
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: all 0.2s ease-in;
+  opacity: 0;
+}
+
+.backdrop--show {
+  opacity: 1;
+  z-index: 2;
+}
+
+.side-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--almost-white);
+  color: var(--dark-space-blue);
+  min-height: 100%;
+  width: 25rem;
+  padding: 2.7rem 2.4rem;
+  transition: all 0.3s ease-in;
+  transform: translateX(100%);
+  visibility: hidden;
+  z-index: 99;
+}
+
+.show-menu {
+  visibility: initial;
+  transform: translateX(0);
+}
+
+.side-menu img {
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.side-menu__items {
+  list-style: none;
+  margin-top: 8rem;
+  margin-inline: 3rem;
+  font-size: var(--fs-heading-xs);
+}
+
+.side-menu__item {
+}
+
+.side-menu__item:not(:last-child) {
+  margin-bottom: 2.4rem;
 }
 
 .homepage__title {
@@ -115,6 +185,7 @@ h6 {
   padding: 1.3rem 3.5rem;
   letter-spacing: 4.38px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .homepage__new {
@@ -146,4 +217,36 @@ h6 {
 .new__article hr {
   margin: 3rem 0;
   border: 1px solid #5e607a;
+}
+
+.homepage__top-article {
+  display: flex;
+  gap: 2.4rem;
+  margin-bottom: 3.2rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper span {
+  font-size: var(--fs-heading-m);
+  color: var(--silver);
+  font-weight: var(--fw-bold);
+}
+
+.homepage__top-article-img {
+  /* test */
+  max-width: 10rem;
+  max-height: 12.7rem;
+}
+
+.homepage__top-article-title {
+  font-size: var(--fs-heading-xs);
+  font-weight: var(--fw-extra-bold);
+}
+
+.homepage__top-article-text {
+  color: var(--gunmetal);
 }
