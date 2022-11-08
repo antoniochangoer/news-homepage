@@ -3,19 +3,116 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./js/app.js" defer></script>
     <title>News homepage</title>
   </head>
   <body>
-    Home New Popular Trending Categories The Bright Future of Web 3.0? We dive
-    into the next evolution of the web that claims to put the power of the
-    platforms back into the hands of the people. But is it really fulfilling its
-    promise? Read more New Hydrogen VS Electric Cars Will hydrogen-fueled cars
-    ever catch up to EVs? The Downsides of AI Artistry What are the possible
-    adverse effects of on-demand AI image generation? Is VC Funding Drying Up?
-    Private funding by VC firms is down 50% YOY. We take a look at what that
-    means. 01 Reviving Retro PCs What happens when old PCs are given modern
-    upgrades? 02 Top 10 Laptops of 2022 Our best picks for various needs and
-    budgets. 03 The Growth of Gaming How the pandemic has sparked fresh
-    opportunities.
+    <div class="container">
+      <header>
+        <nav class="nav">
+          <img class="nav__logo" src="./images/logo.svg" alt="" />
+          <ul class="nav__items hidden">
+            <li class="nav__item">Home</li>
+            <li class="nav__item">New</li>
+            <li class="nav__item">Popular</li>
+            <li class="nav__item">Trending</li>
+            <li class="nav__item">Categories</li>
+          </ul>
+          <img
+            src="./images/icon-menu.svg"
+            alt="three striped menu"
+            class="nav__hamburger"
+          />
+        </nav>
+      </header>
+      <main>
+        <div class="homepage__img">
+          <img src="./images/image-web-3-mobile.jpg" alt="" />
+        </div>
+        <h1 class="homepage__title">The Bright Future of Web 3.0?</h1>
+        <div class="homepage__content">
+          <p class="homepage__text">
+            We dive into the next evolution of the web that claims to put the
+            power of the platforms back into the hands of the people. But is it
+            really fulfilling its promise?
+          </p>
+          <a href="#" class="homepage__btn">Read more</a>
+        </div>
+        <aside class="homepage__new new">
+          <h2 class="new__title">New</h2>
+          <article class="new__article">
+            <h3 class="new__article-title">Hydrogen VS Electric Cars</h3>
+            <p class="new__article-text">
+              Will hydrogen-fueled cars ever catch up to EVs?
+            </p>
+            <hr />
+          </article>
+          <article class="new__article">
+            <h3 class="new__article-title">The Downsides of AI Artistry</h3>
+            <p class="new__article-text">
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+            <hr />
+          </article>
+          <article class="new__article">
+            <h3 class="new__article-title">Is VC Funding Drying Up?</h3>
+            <p class="new__article-text">
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </article>
+        </aside>
+        <article class="homgepage__top-article">
+          <img
+            src="./images/image-retro-pcs.jpg"
+            alt=""
+            class="homepage__top-article-img"
+          />
+          <div class="wrapper">
+            <span>01</span>
+            <h4 class="homepage__top-article-title">Reviving Retro PCs</h4>
+            <p class="homepage__top-article-text">
+              What happens when old PCs are given modern upgrades?
+            </p>
+          </div>
+        </article>
+        <article class="homgepage__top-article">
+          <img
+            src="./images/image-top-laptops.jpg"
+            alt=""
+            class="homepage__top-article-img"
+          />
+          <div class="wrapper">
+            <span>02</span>
+            <h4 class="homepage__top-article-title">Top 10 Laptops of 2022</h4>
+            <p class="homepage__top-article-text">
+              Our best picks for various needs and budgets.
+            </p>
+          </div>
+        </article>
+        <article class="homgepage__top-article">
+          <img
+            src="./images/image-gaming-growth.jpg"
+            alt=""
+            class="homepage__top-article-img"
+          />
+          <div class="wrapper">
+            <span>03</span>
+            <h4 class="homepage__top-article-title">The Growth of Gaming</h4>
+            <p class="homepage__top-article-text">
+              How the pandemic has sparked fresh opportunities.
+            </p>
+          </div>
+        </article>
+      </main>
+    </div>
   </body>
 </html>

@@ -1,0 +1,149 @@
+:root {
+  --light-vermilion: #f15d51;
+  --yellow: #e9aa52;
+  --dark-space-blue: #00001a;
+  --gunmetal: #5e607a;
+  --silver: #c5c6ce;
+  --almost-white: #fffdfa;
+
+  --ff: "Inter", sans-serif;
+  --fs-heading-xl: 5.6rem;
+  --fs-heading-l: 4rem;
+  --fs-heading-m: 3.2rem;
+  --fs-heading-s: 2rem;
+  --fs-heading-xs: 1.8rem;
+  --fs-body: 1.5rem;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--almost-white);
+  font-family: var(--ff);
+  font-size: var(--fs-body);
+  line-height: 1.5;
+  color: var(--dark-space-blue);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.container {
+  max-width: min(111rem, 90%);
+  margin-inline: auto;
+}
+
+/* temporary */
+.hidden {
+  display: none;
+}
+
+.nav {
+  padding-top: 2.8rem;
+  padding-bottom: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  max-width: 4.4rem;
+  max-height: 2.8rem;
+}
+
+.homepage__title {
+  font-weight: var(--fw-extra-bold);
+  font-size: var(--fs-heading-l);
+  color: var(--dark-space-blue);
+  line-height: 1;
+  margin: 2.4rem 0 1.6rem 0;
+}
+
+.homepage__text {
+  color: var(--gunmetal);
+  margin-bottom: 2.4rem;
+}
+
+.homepage__btn {
+  background-color: var(--light-vermilion);
+  color: var(--almost-white);
+  padding: 1.3rem 3.5rem;
+  letter-spacing: 4.38px;
+  text-decoration: none;
+}
+
+.homepage__new {
+  margin: 6.4rem 0;
+}
+
+.new {
+  background-color: var(--dark-space-blue);
+  color: var(--almost-white);
+  padding: 2.4rem 2rem;
+}
+
+.new__title {
+  margin-bottom: 3.5rem;
+  color: var(--yellow);
+}
+
+.new__article {
+}
+
+.new__article-title {
+  margin-bottom: 0.8rem;
+}
+
+.new__article-text {
+  color: var(--silver);
+}
+
+.new__article hr {
+  margin: 3rem 0;
+  border: 1px solid #5e607a;
+}
