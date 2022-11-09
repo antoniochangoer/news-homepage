@@ -14,23 +14,23 @@
     <title>News homepage</title>
   </head>
   <body>
-    <div class="container overflow-h">
-      <header>
+    <div class="overflow-h">
+      <header class="container">
         <nav class="nav">
           <img class="nav__logo" src="./images/logo.svg" alt="" />
-          <ul class="nav__items hidden">
+          <ul class="nav__items">
             <li class="nav__item">Home</li>
             <li class="nav__item">New</li>
             <li class="nav__item">Popular</li>
             <li class="nav__item">Trending</li>
             <li class="nav__item">Categories</li>
           </ul>
+          <div class="backdrop"></div>
           <img
             src="./images/icon-menu.svg"
             alt="three striped menu"
             class="nav__hamburger"
           />
-          <div class="backdrop"></div>
           <!-- side menu -->
           <div class="side-menu">
             <img
@@ -48,10 +48,17 @@
           </div>
         </nav>
       </header>
-      <main>
-        <div class="homepage__img">
+      <main class="main container">
+        <picture class="homepage__img">
+          <source
+            srcset="./images/image-web-3-desktop.jpg"
+            media="(min-width: 800px)"
+          />
           <img src="./images/image-web-3-mobile.jpg" alt="" />
-        </div>
+        </picture>
+        <!-- <div class="homepage__img">
+          <img src="./images/image-web-3-mobile.jpg" alt="" />
+        </div> -->
         <h1 class="homepage__title">The Bright Future of Web 3.0?</h1>
         <div class="homepage__content">
           <p class="homepage__text">
@@ -86,7 +93,7 @@
             </p>
           </article>
         </aside>
-        <article class="homepage__top-article">
+        <article class="homepage__top-article article--1">
           <img
             src="./images/image-retro-pcs.jpg"
             alt=""
@@ -100,7 +107,7 @@
             </p>
           </div>
         </article>
-        <article class="homepage__top-article">
+        <article class="homepage__top-article article--2">
           <img
             src="./images/image-top-laptops.jpg"
             alt=""
@@ -114,7 +121,7 @@
             </p>
           </div>
         </article>
-        <article class="homepage__top-article">
+        <article class="homepage__top-article article--3">
           <img
             src="./images/image-gaming-growth.jpg"
             alt=""

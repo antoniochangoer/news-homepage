@@ -81,12 +81,11 @@ h6 {
 .container {
   max-width: min(111rem, 90%);
   margin-inline: auto;
-  padding: 2.8rem 0;
+  /* padding: 2.8rem 0; */
 }
 
-/* temporary */
-.hidden {
-  display: none;
+header {
+  padding-top: 2.8rem;
 }
 
 .nav {
@@ -97,8 +96,13 @@ h6 {
 }
 
 .nav__logo {
+  cursor: pointer;
   max-width: 4.4rem;
   max-height: 2.8rem;
+}
+
+.nav__items {
+  display: none;
 }
 
 .nav__logo--close {
@@ -166,12 +170,36 @@ h6 {
   margin-bottom: 2.4rem;
 }
 
+.main {
+  display: grid;
+  /* om button voorkomen dat ie stretched */
+  justify-items: left;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "main-img"
+    "main-title"
+    "main-content"
+    "aside"
+    "article-3"
+    "article-2"
+    "article-1";
+}
+
+.homepage__img {
+  grid-area: main-img;
+}
+
 .homepage__title {
+  grid-area: main-title;
   font-weight: var(--fw-extra-bold);
   font-size: var(--fs-heading-l);
   color: var(--dark-space-blue);
   line-height: 1;
   margin: 2.4rem 0 1.6rem 0;
+}
+
+.homepage__content {
+  grid-area: main-content;
 }
 
 .homepage__text {
@@ -189,6 +217,7 @@ h6 {
 }
 
 .homepage__new {
+  grid-area: aside;
   margin: 6.4rem 0;
 }
 
@@ -225,6 +254,18 @@ h6 {
   margin-bottom: 3.2rem;
 }
 
+.article--1 {
+  grid-area: article-1;
+}
+
+.article--2 {
+  grid-area: article-2;
+}
+
+.article--3 {
+  grid-area: article-3;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -250,3 +291,88 @@ h6 {
 .homepage__top-article-text {
   color: var(--gunmetal);
 }
+
+@media (min-width: 1000px) {
+  .nav__logo {
+    max-width: 6.4rem;
+    max-height: 3.9rem;
+  }
+
+  .nav__hamburger {
+    display: none;
+  }
+
+  .nav__items {
+    color: var(--gunmetal);
+    display: flex;
+    gap: 4rem;
+    list-style: none;
+  }
+
+  .nav__item:hover {
+    cursor: pointer;
+    color: var(--light-vermilion);
+  }
+
+  .main {
+    gap: 3rem;
+    grid-template-areas:
+      "main-img main-img aside"
+      "main-title main-content aside"
+      "article-1 article-2 article-3";
+  }
+
+  .homepage__title {
+    font-size: var(--fs-heading-xl);
+    margin: 0;
+  }
+
+  .homepage__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .homepage__btn {
+    font-size: 1.4rem;
+    transition: all 0.2s ease-in;
+  }
+
+  .homepage__btn:hover {
+    background-color: var(--dark-space-blue);
+    color: var(--almost-white);
+  }
+
+  .homepage__new {
+    margin: 0;
+  }
+
+  .new__article-title {
+    cursor: pointer;
+    font-size: var(--fs-heading-s);
+    transition: all 0.2s ease-in;
+  }
+
+  .new__article-title:hover {
+    color: var(--yellow);
+  }
+
+  .homepage__top-article {
+    align-items: center;
+  }
+
+  .homepage__top-article-title {
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    padding-block: 0.9rem;
+  }
+
+  .homepage__top-article-title:hover {
+    color: var(--light-vermilion);
+  }
+}
+/* TODO
+  comments weghalen
+  alt tags
+  css checken voor useless properties
+*/
