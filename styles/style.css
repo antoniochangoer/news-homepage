@@ -219,6 +219,8 @@ header {
 .homepage__new {
   grid-area: aside;
   margin: 6.4rem 0;
+  /* test */
+  width: auto;
 }
 
 .new {
@@ -292,6 +294,26 @@ header {
   color: var(--gunmetal);
 }
 
+/* test optioneel */
+@media (min-width: 700px) {
+  .main {
+    gap: 3rem;
+    grid-template-areas:
+      "main-img main-img main-img"
+      "main-title main-title main-title"
+      "main-content main-content main-content"
+      "aside aside aside"
+      "article-1 article-1 article-1"
+      "article-2 article-2 article-2"
+      "article-3 article-3 article-3";
+  }
+
+  .homepage__new {
+    margin: 0;
+    width: 100%;
+  }
+}
+
 @media (min-width: 1000px) {
   .nav__logo {
     max-width: 6.4rem;
@@ -344,6 +366,7 @@ header {
   }
 
   .homepage__new {
+    width: auto;
     margin: 0;
   }
 
