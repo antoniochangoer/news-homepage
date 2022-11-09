@@ -81,7 +81,6 @@ h6 {
 .container {
   max-width: min(111rem, 90%);
   margin-inline: auto;
-  /* padding: 2.8rem 0; */
 }
 
 header {
@@ -172,7 +171,7 @@ header {
 
 .main {
   display: grid;
-  /* om button voorkomen dat ie stretched */
+  /* prevent btn from stretching */
   justify-items: left;
   grid-auto-columns: 1fr;
   grid-template-areas:
@@ -219,7 +218,6 @@ header {
 .homepage__new {
   grid-area: aside;
   margin: 6.4rem 0;
-  /* test */
   width: auto;
 }
 
@@ -280,7 +278,6 @@ header {
 }
 
 .homepage__top-article-img {
-  /* test */
   max-width: 10rem;
   max-height: 12.7rem;
 }
@@ -294,7 +291,7 @@ header {
   color: var(--gunmetal);
 }
 
-/* test optioneel */
+/* optional media query */
 @media (min-width: 700px) {
   .main {
     gap: 3rem;
@@ -394,8 +391,3 @@ header {
     color: var(--light-vermilion);
   }
 }
-/* TODO
-  comments weghalen
-  alt tags
-  css checken voor useless properties
-*/
